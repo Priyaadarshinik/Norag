@@ -4,4 +4,8 @@ while True:
     q = input("Ask: ")
     if q.lower() == "exit":
         break
-    print(ask_question(q))
+    answer, sources = ask_question(q)
+    print("\nAnswer:",answer)
+    print("\nSources:",len(sources), "chunks used")
+    print("-" * 40)
+    # print(ask_question(q))
