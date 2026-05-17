@@ -20,14 +20,14 @@ index = create_faiss_index(embeddings)
 
 print("Entering interactive mode...")
 
-def ask_question(question):
+def ask_question(question, k=3):
     # Search relevant chunks
-    results = search(index, question, chunks)
-
+    results = search(index, question, chunks,k=k)
+    context = "\n---\n".join(results)
     # Generate answer
     answer = generate_answer(question, results)
 
-    return answer
+    return answer,results
 
 if __name__ == "__main__":
     while True:
@@ -36,6 +36,11 @@ if __name__ == "__main__":
         if question.lower() == "exit":
             break
 
-        answer = ask_question(question)
-        print("\nAnswer:", answer)
+        answer , sources = ask_question(question)
+        print("\n---Answer---")
+        print(answer)
+        print("\n---Sources Used---")
+        for i, source in enumerate(sources,1):
+            short_src = source.strip().replace('\n',' ')[:100]
+            print(f"[{i}] {short_src}...")
         print("-" * 50)
