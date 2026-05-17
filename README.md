@@ -15,10 +15,10 @@ The system retrieves the most relevant document chunks using vector similarity s
 
 ## Tech Stack
 
-Programming Language : Python
-Libraries & Frameworks: Transformers, Sentence Transformers, PyTorch, NumPy, FAISS. PyPDF
-Embedding Model: all-MiniLM-L6-v2
-Language Model: TinyLlama-1.1B-Chat-v1.0
+* Programming Language : Python
+* Libraries & Frameworks: Transformers, Sentence Transformers, PyTorch, NumPy, FAISS. PyPDF
+* Embedding Model: all-MiniLM-L6-v2
+* Language Model: TinyLlama-1.1B-Chat-v1.0
 
 ## Concepts Used
 
@@ -47,8 +47,8 @@ Language Model: TinyLlama-1.1B-Chat-v1.0
 
 Clone Repository
 ```
-git clone <your-repo-link>
-cd personal_rag
+git clone https://github.com/Priyaadarshinik/Norag.git
+cd Norag
 ```
 Install Dependencies
 ```
